@@ -86,3 +86,15 @@ h1 {
         flex-direction: column;
     }
 }
+@media all and (max-width: 768px){
+    .menu{
+        flex-direction: column;
+    }
+    .articulos{
+        flex-direction: column;
+    }
+    .section{
+        background: #FFF80A;
+        flex-direction: column;
+    }
+}
