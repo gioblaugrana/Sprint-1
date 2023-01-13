@@ -1,0 +1,282 @@
+* {
+    margin: 0px;
+    padding: 3px;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.padre {
+    max-width: 1200;
+    height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: repeat(4, auto)
+}
+
+.padre .section,
+.padre .aside,
+.padre nav,
+.padre .footer {
+    background: #b4b4b0;
+}
+
+.padre .header{
+    grid-column: 1/4;
+    grid-row: 1/3;
+    display: block;
+    
+}
+.header {
+    background: url(../images/header.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 5px 1;
+    padding-top: 10px;
+    padding-bottom: 150px;
+}
+.menu {
+    display: flex;
+    height: 100px;
+    
+}
+.header .menu{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+.header .logo img {
+    height: 70px;
+    width: auto;
+    margin-top: -20px;
+    animation: moverIzquierda 1s ease-in;
+}
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+.header .nav{
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+}
+.nav a {
+    color: #5e5b52;
+    margin-right: 70px;
+}
+.nav a:hover {
+    color: #aa0707;
+}
+
+.header .social{
+    display: flex;
+justify-content: center;
+}
+.social{
+    display: flex;
+    animation: moverDerecha 1s ease-in;
+
+}
+.social a {
+    color: #5e5b52;
+}
+.social a:hover {
+    color: #aa0707;
+}
+.padre .texto-principal{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+.texto-principal{
+    opacity: 0.5;
+    text-align: center;
+    margin-inline-start: 100px;
+    margin-inline-end: 100px;
+    margin-block-start: -80px;
+    background: rgba(173, 172, 172, 0.603);
+    color: #ff9500;
+    font-family: 'Merriweather';
+    animation: aparecer 1s ease-in;
+}
+.padre .section{
+    grid-template-columns: 2fr 2fr 1f;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+.section .articulos{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-column: 1/3;
+    grid-row: 3/6;
+}
+.articulos .article1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+h3 {
+    column-span: all;
+    color: #fdba00;
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    column-span: all;
+    color: white;
+    background-color: #ca134a;
+    padding: 10px 2px 0;
+    margin-bottom: 12px;
+
+}
+.articulos p {
+    text-align: left;
+    color: #2b2825;
+}
+
+.article1{
+    background: #e6e6e7;
+    border: solid #b4b4b0;
+}
+.article1 p{
+    column-count: 2;
+}
+.article1 a {
+    display: block;
+    column-span: all;
+    margin-top: 20px;
+    color: #5e5b52;
+}
+.articulos .article2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.article2{
+    background: #e6e6e7;
+    border: solid #b4b4b0;
+}
+.article2 p{
+    column-count: 2;
+}
+.article2 a {
+    display: block;
+    column-span: all;
+    margin-top: 20px;
+    color: #5e5b52;
+}
+.articulos .article3{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.article3{
+    background: #e6e6e7;
+    border: solid #b4b4b0;
+
+}
+.article3 p{
+    column-count: 2;
+}
+.article3 a {
+    display: block;
+    column-span: all;
+    margin-top: 20px;
+    color: #5e5b52;
+}
+.articulos .article4{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.article4{
+    background: #e6e6e7;
+    border: solid #b4b4b0;
+
+}
+.article4 p{
+    column-count: 2;
+}
+.article4 a {
+    display: block;
+    column-span: all;
+    margin-top: 20px;
+    color: #5e5b52;
+    border-radius: 10px;
+}
+.articulos .navegacion{
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+
+.navegacion p{
+    color: black;
+}
+.section .aside{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr ;
+    grid-column: 3/4;
+    grid-row: 3/6;
+}
+.publicidad{
+    text-align: center;
+    margin-top: 10px;
+}
+.publicidad p{
+    color: #2b2825;
+}
+
+.footer{
+    grid-column: 1/4;
+    grid-row: 4/7;
+    text-align: center;
+}
+.pie p {
+    font-size: 12px;
+    color: #5a5a58;
+    background:white;
+}
+
+
+@keyframes moverIzquierda {
+    0% {
+        opacity: 0;
+        transform: translate3d(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+@keyframes moverDerecha {
+    0% {
+        opacity: 0;
+        transform: translate3d(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateZ(100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
